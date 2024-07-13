@@ -1,59 +1,28 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useEffect } from 'react';
+// import Papa from 'papaparse';
 
-function CsvToJsonConverter(props) {
-    const [jsonData, setJsonData] = useState(null);
-    const handleFileUpload = (event) => {
-        const file = event.target.files[0];
-        const reader = new FileReader();
+// const CsvToJson = ({ onDataLoaded }) => {
+//     useEffect(() => {
+//         const fetchCsv = async () => {
+//             const response = await fetch('/data.csv');
+//             const reader = response.body.getReader();
+//             const result = await reader.read();
+//             const decoder = new TextDecoder('utf-8');
+//             const csv = decoder.decode(result.value);
 
-        reader.onload = (e) => {
-            const csvData = e.target.result;
-            const lines = csvData.split('\n');
-            const headers = lines[0].split(',');
-            const data = [];
+//             Papa.parse(csv, {
+//                 complete: (result) => {
+//                     onDataLoaded(result.data); // Gọi callback với dữ liệu
+//                 },
+//                 header: true,
+//                 skipEmptyLines: true
+//             });
+//         };
 
-            for (let i = 1; i < lines.length; i++) {
-                const values = lines[i].split(',');
-                if (values.length === headers.length) {
-                    const obj = {};
-                    for (let j = 0; j < headers.length; j++) {
-                        obj[headers[j]] = values[j];
-                    }
-                    data.push(obj);
-                }
-            }
+//         fetchCsv();
+//     }, [onDataLoaded]);
 
-            setJsonData(data);
-        };
+//     return null; // Không render gì cả
+// };
 
-        reader.readAsText(file);
-    };
-    useEffect(() => {
-        const fetchCsvData = async () => {
-            try {
-                const response = await fetch('/data.csv'); // Đảm bảo tên file chính xác
-                const csvData = await response.text();
-                handleFileUpload({ target: { files: [new File([csvData], 'data.csv')] } });
-            } catch (error) {
-                console.error('Error fetching CSV:', error);
-            }
-        };
-
-        fetchCsvData();
-    }, []); // useEffect chỉ chạy một lần khi component được mount\
-    useEffect(() => {
-        if (jsonData && props.onDataLoaded) {
-            props.onDataLoaded(jsonData); // Gọi hàm callback với dữ liệu JSON
-        }
-    }, [jsonData, props.onDataLoaded]);
-
-    return (
-        <div>
-            {jsonData && (
-                <pre>{JSON.stringify(jsonData, null, 2)}</pre>
-            )}
-        </div>
-    );
-}
-
-export default CsvToJsonConverter;
+// export default CsvToJson;

@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import FootballChart from './components/ChartPage/FootballChart';
-
-function App() {
+import React from 'react';
+import FootballChart from './components/ChartPage/FootballChart'; // Đảm bảo đường dẫn đến file đúng
+const App = () => {
   return (
-    <div className="App">
+    <div>
+      <h1>CSV to JSON Converter App</h1>
       <FootballChart />
     </div>
   );
-}
+};
 
 export default App;
