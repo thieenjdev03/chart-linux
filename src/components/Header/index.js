@@ -7,7 +7,8 @@ const Header = (props) => {
                 <a href='/'>Home</a>
                 <a href='/ChartPerTeamPage'>Thống kê theo đội bóng</a>
                 <a href='/ChartPerStage'>Thống kê theo vòng</a>
-                <a href='/ChartPerGroup'>Thống kê theo bảng</a>
+                <a href='/MatchStatics'>Thống kê tất cả mùa giải</a>
+                <a className='index-header-item' href='/information'>Thông Tin Nhóm</a>
             </div>
         </>
     );

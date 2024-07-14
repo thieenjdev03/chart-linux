@@ -1,56 +1,56 @@
-day,time,team1,team2,score
-05-07,23:00,Tây Ban Nha,Đức,2 - 1
-06-07,02:00,Bồ Đào Nha,Pháp,0 - 0
-06-07,23:00,Anh,Thụy Sĩ,1 - 1
-07-07,02:00,Hà Lan,Thổ Nhĩ Kỳ,2 - 1
-10-07,02:00,Tây Ban Nha,Pháp,vs
-11-07,02:00,Hà Lan,Anh,vs
-15-07,02:00,Spain/France,Netherlands/England,vs
-15-06,02:00,Đức,Scotland,5 - 1
-15-06,20:00,Hungary,Thụy Sĩ,1 - 3
-15-06,23:00,Tây Ban Nha,Croatia,3 - 0
-16-06,02:00,Italia,Albania,2 - 1
-16-06,20:00,Ba Lan,Hà Lan,1 - 2
-16-06,23:00,Slovenia,Đan Mạch,1 - 1
-17-06,02:00,Serbia,Anh,0 - 1
-17-06,20:00,Romania,Ukraine,3 - 0
-17-06,23:00,Bỉ,Slovakia,0 - 1
-18-06,02:00,Áo,Pháp,0 - 1
-18-06,23:00,Thổ Nhĩ Kỳ,Georgia,3 - 1
-19-06,02:00,Bồ Đào Nha,CH Séc,2 - 1
-19-06,20:00,Croatia,Albania,2 - 2
-19-06,23:00,Đức,Hungary,2 - 0
-20-06,02:00,Scotland,Thụy Sĩ,1 - 1
-20-06,20:00,Slovenia,Serbia,1 - 1
-20-06,23:00,Đan Mạch,Anh,1 - 1
-21-06,02:00,Tây Ban Nha,Italia,1 - 0
-21-06,20:00,Slovakia,Ukraine,1 - 2
-21-06,23:00,Ba Lan,Áo,1 - 3
-22-06,02:00,Hà Lan,Pháp,0 - 0
-22-06,20:00,Georgia,CH Séc,1 - 1
-22-06,23:00,Thổ Nhĩ Kỳ,Bồ Đào Nha,0 - 3
-23-06,02:00,Bỉ,Romania,2 - 0
-24-06,02:00,Thụy Sĩ,Đức,1 - 1
-24-06,02:00,Scotland,Hungary,0 - 1
-25-06,02:00,Croatia,Italia,1 - 1
-25-06,02:00,Albania,Tây Ban Nha,0 - 1
-25-06,23:00,Hà Lan,Áo,2 - 3
-25-06,23:00,Pháp,Ba Lan,1 - 1
-26-06,02:00,Anh,Slovenia,0 - 0
-26-06,02:00,Đan Mạch,Serbia,0 - 0
-26-06,23:00,Ukraine,Bỉ,0 - 0
-26-06,23:00,Slovakia,Romania,1 - 1
-27-06,02:00,Georgia,Bồ Đào Nha,2 - 0
-27-06,02:00,CH Séc,Thổ Nhĩ Kỳ,1 - 2
-29-06,23:00,Thụy Sĩ,Italia,2 - 0
-30-06,02:00,Đức,Đan Mạch,2 - 0
-30-06,23:00,Anh,Slovakia,2 - 1
-01-07,02:00,Tây Ban Nha,Georgia,4 - 1
-01-07,23:00,Pháp,Bỉ,1 - 0
-02-07,02:00,Bồ Đào Nha,Slovenia,0 - 0
-02-07,23:00,Romania,Hà Lan,0 - 3
-03-07,02:00,Áo,Thổ Nhĩ Kỳ,1 - 2
-05-07,23:00,Tây Ban Nha,Đức,2 - 1
-06-07,02:00,Bồ Đào Nha,Pháp,0 - 0
-06-07,23:00,Anh,Thụy Sĩ,1 - 1
-07-07,02:00,Hà Lan,Thổ Nhĩ Kỳ,2 - 1
+day,time,team1,team2,score,stage
+06-07,23:00,Anh,Thụy Sĩ,1 - 1,Vòng tứ kết
+07-07,02:00,Hà Lan,Thổ Nhĩ Kỳ,2 - 1,Vòng tứ kết
+10-07,02:00,Tây Ban Nha,Pháp,2 - 1,Vòng bán kết
+11-07,02:00,Hà Lan,Anh,1 - 2,Vòng bán kết
+15-07,02:00,Tây Ban Nha,Anh,vs,Chung kết
+15-06,02:00,Đức,Scotland,5 - 1,Bảng A
+15-06,20:00,Hungary,Thụy Sĩ,1 - 3,Bảng A
+15-06,23:00,Tây Ban Nha,Croatia,3 - 0,Bảng B
+16-06,02:00,Italia,Albania,2 - 1,Bảng B
+16-06,20:00,Ba Lan,Hà Lan,1 - 2,Bảng D
+16-06,23:00,Slovenia,Đan Mạch,1 - 1,Bảng C
+17-06,02:00,Serbia,Anh,0 - 1,Bảng C
+17-06,20:00,Romania,Ukraine,3 - 0,Bảng E
+17-06,23:00,Bỉ,Slovakia,0 - 1,Bảng E
+18-06,02:00,Áo,Pháp,0 - 1,Bảng D
+18-06,23:00,Thổ Nhĩ Kỳ,Georgia,3 - 1,Bảng F
+19-06,02:00,Bồ Đào Nha,CH Séc,2 - 1,Bảng F
+19-06,20:00,Croatia,Albania,2 - 2,Bảng B
+19-06,23:00,Đức,Hungary,2 - 0,Bảng A
+20-06,02:00,Scotland,Thụy Sĩ,1 - 1,Bảng A
+20-06,20:00,Slovenia,Serbia,1 - 1,Bảng C
+20-06,23:00,Đan Mạch,Anh,1 - 1,Bảng C
+21-06,02:00,Tây Ban Nha,Italia,1 - 0,Bảng B
+21-06,20:00,Slovakia,Ukraine,1 - 2,Bảng E
+21-06,23:00,Ba Lan,Áo,1 - 3,Bảng D
+22-06,02:00,Hà Lan,Pháp,0 - 0,Bảng D
+22-06,20:00,Georgia,CH Séc,1 - 1,Bảng F
+22-06,23:00,Thổ Nhĩ Kỳ,Bồ Đào Nha,0 - 3,Bảng F
+23-06,02:00,Bỉ,Romania,2 - 0,Bảng E
+24-06,02:00,Thụy Sĩ,Đức,1 - 1,Bảng A
+24-06,02:00,Scotland,Hungary,0 - 1,Bảng A
+25-06,02:00,Croatia,Italia,1 - 1,Bảng B
+25-06,02:00,Albania,Tây Ban Nha,0 - 1,Bảng B
+25-06,23:00,Hà Lan,Áo,2 - 3,Bảng D
+25-06,23:00,Pháp,Ba Lan,1 - 1,Bảng D
+26-06,02:00,Anh,Slovenia,0 - 0,Bảng C
+26-06,02:00,Đan Mạch,Serbia,0 - 0,Bảng C
+26-06,23:00,Ukraine,Bỉ,0 - 0,Bảng E
+26-06,23:00,Slovakia,Romania,1 - 1,Bảng E
+27-06,02:00,Georgia,Bồ Đào Nha,2 - 0,Bảng F
+27-06,02:00,CH Séc,Thổ Nhĩ Kỳ,1 - 2,Bảng F
+29-06,23:00,Thụy Sĩ,Italia,2 - 0,Vòng 1/8
+30-06,02:00,Đức,Đan Mạch,2 - 0,Vòng 1/8
+30-06,23:00,Anh,Slovakia,2 - 1,Vòng 1/8
+01-07,02:00,Tây Ban Nha,Georgia,4 - 1,Vòng 1/8
+01-07,23:00,Pháp,Bỉ,1 - 0,Vòng 1/8
+02-07,02:00,Bồ Đào Nha,Slovenia,0 - 0,Vòng 1/8
+02-07,23:00,Romania,Hà Lan,0 - 3,Vòng 1/8
+03-07,02:00,Áo,Thổ Nhĩ Kỳ,1 - 2,Vòng 1/8
+05-07,23:00,Tây Ban Nha,Đức,2 - 1,Vòng tứ kết
+06-07,02:00,Bồ Đào Nha,Pháp,0 - 0,Vòng tứ kết
+06-07,23:00,Anh,Thụy Sĩ,1 - 1,Vòng tứ kết
+07-07,02:00,Hà Lan,Thổ Nhĩ Kỳ,2 - 1,Vòng tứ kết
+10-07,02:00,Tây Ban Nha,Pháp,2 - 1,Vòng bán kết
+11-07,02:00,Hà Lan,Anh,1 - 2,Vòng bán kết

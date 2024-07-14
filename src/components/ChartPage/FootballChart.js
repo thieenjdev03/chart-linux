@@ -57,28 +57,27 @@ const FootballChart = () => {
                 results[team2].draws += 1;
             }
         });
-
+        localStorage.setItem('values', JSON.stringify(values));
         return results;
     }
 
     // Tính toán kết quả cho tất cả các đội bóng
     const allResults = calculateResults(values);
-
     return (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 text-center w-full justify-center items-center">
+            <h1 className="text-3xl text-red-700 font-bold">Thống kê tỷ lệ thắng của các đội bóng</h1>
             <CsvToJson onDataLoaded={(data) => setValues(data)} />
-            <div className="w-1/3">
+            <div className="w-1/3 justify-center items-center">
                 <Select
                     closeMenuOnSelect={true}
-                    value={selectedTeams}
+                    value={(selectedTeams == null) ? teamOptions[0] : selectedTeams}
                     options={teamOptions}
                     onChange={onOptionChange}
                     placeholder="Select teams"
                     isMulti
                 />
             </div>
-            <div className="flex flex-col gap-6 font-bold">
-                <h1 className="text-xl text-red-700 ">Thống kê tỷ lệ thắng của các đội bóng</h1>
+            <div className="flex flex-col gap-6 font-bold w-full">
                 <div className="wrap w-full flex flex-wrap gap-10 font-normal">
                     {selectedTeams.map((team, index) => {
                         const teamResults = allResults[team.label] || { wins: 0, losses: 0, draws: 0 };
