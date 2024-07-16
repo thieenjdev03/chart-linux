@@ -1,25 +1,30 @@
-import React from 'react';
-import ChartPerTeamPage from './components/ChartPage'; // Đảm bảo đường dẫn đến file đúng
-import ChartPerStage from './components/ChartPerStage'; // Đảm bảo đường dẫn đến file đúng
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import OverallStatsChart from './components/ChartOfSeason/OverallStatsChart'; // Đảm bảo đường dẫn đến file đúng
-import Information from './components/Information'; // Đảm bảo đường dẫn đến file đúng
+import ChartPerTeamPage from './components/ChartPage';
+import ChartPerStage from './components/ChartPerStage';
+import OverallStatsChart from './components/ChartOfSeason/OverallStatsChart';
+import Information from './components/Information';
+import GoogleSheetsApi from './components/GoogleSheetAPI';
+
 const App = () => {
+  const [sheetData, setSheetData] = useState([]);
+
+  const handleDataFetch = (data) => {
+    setSheetData(data);
+  };
 
   return (
     <BrowserRouter>
+      <GoogleSheetsApi onDataFetch={handleDataFetch} />
       <Routes>
-        <Route index element={<ChartPerTeamPage />} />
-        <Route path="/ChartPerTeamPage" element={
-          <ChartPerTeamPage />
-        } />
-        <Route path="/ChartPerStage" element={<ChartPerStage />} />
-        <Route path="/MatchStatics" element={<OverallStatsChart />} />
-        <Route path="/information" element={<Information />} />
+        <Route index element={<ChartPerTeamPage data={sheetData} />} />
+        <Route path="/ChartPerTeamPage" element={<ChartPerTeamPage data={sheetData} />} />
+        <Route path="/ChartPerStage" element={<ChartPerStage data={sheetData} />} />
+        <Route path="/MatchStatics" element={<OverallStatsChart data={sheetData} />} />
+        <Route path="/information" element={<Information data={sheetData} />} />
       </Routes>
-    </BrowserRouter >
-
+    </BrowserRouter>
   );
 };
 
-export default App;
+export default App
