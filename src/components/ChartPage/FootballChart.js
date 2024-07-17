@@ -10,7 +10,7 @@ const FootballChart = () => {
     const onOptionChange = (options) => {
         setSelectedTeams(options);
     };
-    console.log = () =>{}
+
     // Sử dụng Set để đảm bảo tên đội bóng là duy nhất
     const teams = new Set();
     values.forEach(match => {
@@ -27,7 +27,7 @@ const FootballChart = () => {
     useEffect(() => {
         localStorage.getItem('storageKey') && setValues(JSON.parse(localStorage.getItem('storageKey')));
         console.log(values);
-    },[]);
+    });
     function calculateResults(values) {
         const results = {};
 

@@ -10,8 +10,6 @@ function ChartPerStage(props) {
         localStorage.getItem('storageKey') && setValues(JSON.parse(localStorage.getItem('storageKey')));
         console.log(values);
     });
-    console.log = () =>{}
-
     return (
         <div>
             <Header />

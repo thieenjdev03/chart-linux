@@ -9,7 +9,6 @@ const SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 const GoogleSheetsApi = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
-  console.log = () =>{}
 
   useEffect(() => {
     const initClient = () => {

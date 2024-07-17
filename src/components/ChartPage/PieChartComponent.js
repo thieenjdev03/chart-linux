@@ -6,10 +6,10 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const PieChartComponent = ({ teamResults, resultTeamName }) => {
     const data = {
-        labels: ['Thắng', 'Thua', 'Hòa'],
+        labels: ['Wins', 'Losses', 'Draws'],
         datasets: [
             {
-                label: `Kết quả cho đội : ${resultTeamName}`,
+                label: `Results for ${resultTeamName}`,
                 data: [teamResults.wins, teamResults.losses, teamResults.draws],
                 backgroundColor: ['#36A2EB', '#FF6384', '#FFCE56'],
                 hoverBackgroundColor: ['#36A2EB', '#FF6384', '#FFCE56'],

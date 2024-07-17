@@ -10,7 +10,6 @@ const values = localStorage.getItem('storageKey');
 const FootballChart = () => {
     const [selectedStage, setSelectedStage] = useState(null);
     const [values, setValues] = useState([]);
-    console.log = () =>{}
 
     useEffect(() => {
         // Fetch data from localStorage or replace with actual data fetching
@@ -40,7 +39,7 @@ const FootballChart = () => {
     useEffect(() => {
         localStorage.getItem('storageKey') && setValues(JSON.parse(localStorage.getItem('storageKey')));
         console.log(values);
-    },[]);
+    });
     // Handle change in Select component
     const onOptionStageChange = (option) => {
         setSelectedStage(option);
