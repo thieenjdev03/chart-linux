@@ -6,11 +6,11 @@ import PieChartComponent from "./PieChartComponent";
 const FootballChart = () => {
     const [values, setValues] = useState([]);
     const [selectedTeams, setSelectedTeams] = useState([]);
-
+    
     const onOptionChange = (options) => {
         setSelectedTeams(options);
     };
-
+    console.log = () =>{}
     // Sử dụng Set để đảm bảo tên đội bóng là duy nhất
     const teams = new Set();
     values.forEach(match => {
@@ -24,7 +24,10 @@ const FootballChart = () => {
         value: index,
         label: team
     }));
-
+    useEffect(() => {
+        localStorage.getItem('storageKey') && setValues(JSON.parse(localStorage.getItem('storageKey')));
+        console.log(values);
+    },[]);
     function calculateResults(values) {
         const results = {};
 
@@ -63,6 +66,10 @@ const FootballChart = () => {
 
     // Tính toán kết quả cho tất cả các đội bóng
     const allResults = calculateResults(values);
+    useEffect(() => {
+        localStorage.getItem('storageKey') && setValues(JSON.parse(localStorage.getItem('storageKey')));
+        console.log(values);
+    });
     return (
         <div className="flex flex-col gap-6 text-center w-full justify-center items-center">
             <h1 className="text-3xl text-red-700 font-bold">Thống kê tỷ lệ thắng của các đội bóng</h1>

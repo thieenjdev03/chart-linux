@@ -10,8 +10,13 @@ ChartJS.register(BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend)
 const OverallStatsChart = () => {
     const [values, setValues] = useState([]);
     useEffect(() => {
-        localStorage.getItem('values') && setValues(JSON.parse(localStorage.getItem('values')));
+        const storedValues = localStorage.getItem('storageKey');
+        if (storedValues) {
+            setValues(JSON.parse(storedValues));
+        }
     });
+    
+    console.log = () =>{}
 
     const overallStats = calculateOverallStats(values);
 

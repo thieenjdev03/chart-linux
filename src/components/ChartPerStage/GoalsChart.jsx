@@ -1,5 +1,5 @@
 // GoalsChart.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend } from 'chart.js';
 import { calculateGoals } from '../../utils/goalProcessor'; // Đảm bảo đường dẫn chính xác
@@ -54,7 +54,7 @@ const GoalsChart = ({ matches }) => {
             }
         }
     };
-
+  
     return (
         <>
             <h1 className="text-3xl text-red-700 font-bold text-center">Danh sách đội, số trận thắng và số trận thua trong của các đội</h1 >

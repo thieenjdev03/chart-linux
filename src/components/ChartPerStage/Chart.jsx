@@ -6,14 +6,15 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 // Register components
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 // Sample data (replace with actual data fetching)
-const values = localStorage.getItem('values');
+const values = localStorage.getItem('storageKey');
 const FootballChart = () => {
     const [selectedStage, setSelectedStage] = useState(null);
     const [values, setValues] = useState([]);
+    console.log = () =>{}
 
     useEffect(() => {
         // Fetch data from localStorage or replace with actual data fetching
-        const storedValues = localStorage.getItem('values');
+        const storedValues = localStorage.getItem('storageKey');
         if (storedValues) {
             setValues(JSON.parse(storedValues));
         } else {
@@ -36,7 +37,10 @@ const FootballChart = () => {
             setSelectedStage(stageOptions[0]);
         }
     }, [stageOptions, selectedStage]);
-
+    useEffect(() => {
+        localStorage.getItem('storageKey') && setValues(JSON.parse(localStorage.getItem('storageKey')));
+        console.log(values);
+    },[]);
     // Handle change in Select component
     const onOptionStageChange = (option) => {
         setSelectedStage(option);

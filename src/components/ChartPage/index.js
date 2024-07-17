@@ -4,11 +4,13 @@ import Header from '../Header';
 import Footer from '../Footer';
 import GoalsChart from './GoalsChart';
 function ChartPerTeamPage(props) {
-    const [values, setValues] = useState([]); // Dữ liệu từ file CSV
+    const [values, setValues] = useState([]); 
     useEffect(() => {
-        localStorage.getItem('values') && setValues(JSON.parse(localStorage.getItem('values')));
+        localStorage.getItem('storageKey') && setValues(JSON.parse(localStorage.getItem('storageKey')));
         console.log(values);
     });
+    console.log = () =>{}
+
     return (
         <div>
             <Header />

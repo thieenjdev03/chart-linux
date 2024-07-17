@@ -22,6 +22,7 @@ const App = () => {
         <Route path="/ChartPerStage" element={<ChartPerStage data={sheetData} />} />
         <Route path="/MatchStatics" element={<OverallStatsChart data={sheetData} />} />
         <Route path="/information" element={<Information data={sheetData} />} />
+        <Route path="/test" element={<GoogleSheetsApi data={sheetData} />} />
       </Routes>
     </BrowserRouter>
   );

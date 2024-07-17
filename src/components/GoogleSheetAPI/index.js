@@ -9,6 +9,7 @@ const SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 const GoogleSheetsApi = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
+  console.log = () =>{}
 
   useEffect(() => {
     const initClient = () => {
@@ -78,7 +79,7 @@ const GoogleSheetsApi = () => {
     localStorage.setItem('storageKey', convertToJSONAndStore(data, 'storageKey'));
   })
   return (
-    <div>
+    <div className='hidden'>
       <h1>Google Sheets Data</h1>
       {error && <div style={{ color: 'red' }}>{error}</div>}
       <button onClick={loadSheetData}>Load Data</button>
